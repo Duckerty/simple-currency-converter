@@ -49,6 +49,25 @@ function currencyConvert() {
   }
 }
 
+function startProgramm() {
+  while(true) {
+    console.log('What do you want to do?');
+    console.log('1-Convert currencies 2-Exit program');
+    let whatToDo = Number(input(""));
+    if (whatToDo === 1) {
+      while(true) {
+        currencyConvert();
+      }
+    } else if (whatToDo === 2) {
+      console.log("Have a nice day!");
+      break;
+    } else {
+      console.log("Unknown input");
+      continue;
+    }
+  }
+}
+
 greetings();
 showCurrencies();
-currencyConvert();
+startProgramm();
